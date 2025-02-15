@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using IMS.CoreBusiness;
+using IMS.Usecase.PluginInterfaces;
 
 namespace IMS.Usecase.Inventories;
 public class ViewInventoriesByNameUseCase
