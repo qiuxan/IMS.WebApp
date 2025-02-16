@@ -19,7 +19,7 @@ public class ViewInventoriesByNameUseCase
     // It is to present the list of inventories so the function return type is IEnumerable of Inventory
     public async Task<IEnumerable<Inventory>> ExcuteAsync(string name = "")
     {
-        return await inventoryRepository.GetInventoriesByName(name);
+        return await inventoryRepository.GetInventoriesByNameAsync(name);
 
     }
 }

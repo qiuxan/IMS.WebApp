@@ -8,5 +8,5 @@ using IMS.CoreBusiness;
 namespace IMS.Usecase.PluginInterfaces;
 public interface IInventoryRepository
 {
-    Task<IEnumerable<Inventory>> GetInventoriesByName(string name);
+    Task<IEnumerable<Inventory>> GetInventoriesByNameAsync(string name);
 }

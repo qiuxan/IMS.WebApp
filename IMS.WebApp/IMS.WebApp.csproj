@@ -6,4 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\IMS.CoreBusiness\IMS.CoreBusiness.csproj" />
+    <ProjectReference Include="..\IMS.Plugins\IMS.Plugings.InMemory\IMS.Plugings.InMemory.csproj" />
+    <ProjectReference Include="..\IMS.Usecase\IMS.Usecase.csproj" />
+  </ItemGroup>
+
 </Project>

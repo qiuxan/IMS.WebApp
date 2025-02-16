@@ -1,9 +1,13 @@
+using IMS.Plugings.InMemory;
+using IMS.Usecase.PluginInterfaces;
 using IMS.WebApp.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents();
+
+builder.Services.AddSingleton<IInventoryRepository, InventoryRepository>();
 
 var app = builder.Build();
 
