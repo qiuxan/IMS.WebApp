@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\IMS.Usecase\IMS.Usecase.csproj" />
+    <ProjectReference Include="..\..\IMS.Usecase\IMS.UseCases.csproj" />
   </ItemGroup>
 
 </Project>

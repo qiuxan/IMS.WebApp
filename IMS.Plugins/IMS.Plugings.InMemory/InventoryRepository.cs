@@ -1,5 +1,5 @@
 ﻿using IMS.CoreBusiness;
-using IMS.Usecase.PluginInterfaces;
+using IMS.UseCases.PluginInterfaces;
 
 namespace IMS.Plugings.InMemory;
 

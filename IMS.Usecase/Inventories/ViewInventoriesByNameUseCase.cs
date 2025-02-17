@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using IMS.CoreBusiness;
-using IMS.Usecase.PluginInterfaces;
+using IMS.UseCases.PluginInterfaces;
 
-namespace IMS.Usecase.Inventories;
+namespace IMS.UseCases.Inventories;
 public class ViewInventoriesByNameUseCase
 {
     private readonly IInventoryRepository inventoryRepository;

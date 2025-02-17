@@ -1,5 +1,5 @@
 using IMS.Plugings.InMemory;
-using IMS.Usecase.PluginInterfaces;
+using IMS.UseCases.PluginInterfaces;
 using IMS.WebApp.Components;
 
 var builder = WebApplication.CreateBuilder(args);

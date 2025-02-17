@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -9,7 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\IMS.CoreBusiness\IMS.CoreBusiness.csproj" />
     <ProjectReference Include="..\IMS.Plugins\IMS.Plugings.InMemory\IMS.Plugings.InMemory.csproj" />
-    <ProjectReference Include="..\IMS.Usecase\IMS.Usecase.csproj" />
+    <ProjectReference Include="..\IMS.Usecase\IMS.UseCases.csproj" />
   </ItemGroup>
 
 </Project>

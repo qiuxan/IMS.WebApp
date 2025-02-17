@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using IMS.CoreBusiness;
 
-namespace IMS.Usecase.PluginInterfaces;
+namespace IMS.UseCases.PluginInterfaces;
 public interface IInventoryRepository
 {
     Task<IEnumerable<Inventory>> GetInventoriesByNameAsync(string name);
