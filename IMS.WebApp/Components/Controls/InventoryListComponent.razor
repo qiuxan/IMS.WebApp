@@ -15,14 +15,7 @@
         {
             @foreach (var inventory in inventories)
             {
-                <tr>
-                    <td>@inventory.InventoryName</td>
-                    <td>@inventory.Quantity</td>
-                    <td>@inventory.Price</td>
-                    <td>
-                        <button class="btn btn-light">Edit</button>
-                    </td>
-                </tr>
+                <InventoryListItemComponent Inventory="inventory"></InventoryListItemComponent>
             }
         }
     </tbody>
