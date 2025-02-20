@@ -23,4 +23,9 @@ public class InventoryRepository : IInventoryRepository
 
         return await Task.FromResult(_inventories.Where(i => i.InventoryName.Contains(name)));
     }
+
+    Task IInventoryRepository.AddInventoryAsync(Inventory inventory)
+    {
+        throw new NotImplementedException();
+    }
 }
