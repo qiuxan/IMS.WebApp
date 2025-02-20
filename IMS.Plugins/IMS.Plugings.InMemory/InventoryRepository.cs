@@ -26,6 +26,15 @@ public class InventoryRepository : IInventoryRepository
 
     Task IInventoryRepository.AddInventoryAsync(Inventory inventory)
     {
-        throw new NotImplementedException();
+        if (_inventories.Any(i =>
+                i.InventoryName.Equals(inventory.InventoryName, StringComparison.OrdinalIgnoreCase)))
+        {
+            return Task.CompletedTask;
+        }
+
+        var maxId = _inventories.Max(i => i.InventoryId);
+        inventory.InventoryId = maxId + 1;
+        _inventories.Add(inventory);
+        return Task.CompletedTask;
     }
 }
