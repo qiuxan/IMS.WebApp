@@ -37,4 +37,24 @@ public class InventoryRepository : IInventoryRepository
         _inventories.Add(inventory);
         return Task.CompletedTask;
     }
+
+    Task IInventoryRepository.UpdateInventoryAsync(Inventory inventory)
+    {
+        if (_inventories.Any(i => i.InventoryId != inventory.InventoryId) &&
+            _inventories.Any(i => i.InventoryName.Equals(inventory.InventoryName, StringComparison.OrdinalIgnoreCase))
+           )
+        
+            return Task.CompletedTask;
+        
+        var InventoryToUpdate = _inventories.FirstOrDefault(i => i.InventoryId == inventory.InventoryId);
+        if (InventoryToUpdate is not null)
+        {
+            InventoryToUpdate.InventoryName = inventory.InventoryName;
+            InventoryToUpdate.Quantity = inventory.Quantity;
+            InventoryToUpdate.Price = inventory.Price;
+        }
+
+        
+        return Task.CompletedTask;
+    }
 }
