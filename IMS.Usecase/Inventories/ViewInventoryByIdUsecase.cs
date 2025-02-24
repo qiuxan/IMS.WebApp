@@ -9,10 +9,10 @@ using IMS.UseCases.PluginInterfaces;
 
 namespace IMS.UseCases.Inventories
 {
-    public class ViewInventoryByIdUsecase : IViewInventoryByIdUsecase
+    public class ViewInventoryByIdUseCase : IViewInventoryByIdUseCase
     {
         private readonly IInventoryRepository _inventoryRepository;
-        public ViewInventoryByIdUsecase(IInventoryRepository inventoryRepository)
+        public ViewInventoryByIdUseCase(IInventoryRepository inventoryRepository)
         {
             _inventoryRepository = inventoryRepository;
         }

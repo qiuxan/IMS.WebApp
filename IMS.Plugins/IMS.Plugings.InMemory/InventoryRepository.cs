@@ -45,9 +45,11 @@ public class InventoryRepository : IInventoryRepository
 
     Task IInventoryRepository.UpdateInventoryAsync(Inventory inventory)
     {
-        if (_inventories.Any(i => i.InventoryId != inventory.InventoryId) &&
-            _inventories.Any(i => i.InventoryName.Equals(inventory.InventoryName, StringComparison.OrdinalIgnoreCase))
-           )
+        if (
+                _inventories.Any(i => i.InventoryId != inventory.InventoryId &&
+                i.InventoryName.Equals(inventory.InventoryName, StringComparison.OrdinalIgnoreCase))
+            )
+           
         
             return Task.CompletedTask;
         
