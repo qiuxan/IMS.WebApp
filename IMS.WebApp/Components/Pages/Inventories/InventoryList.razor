@@ -3,19 +3,20 @@
 <h3>InventoryList</h3>
 <br/>
 
-<EditForm Model="InventoryNameToSearch" FormName="formSearchInv">
-    <div class="input-group">
-        <InputText @bind-Value="InventoryNameToSearch" class="form-control" placeholder="Search Inventory" />
-        <button type="submit" class="btn btn-success input-group-text">Search</button>
-    </div>
-</EditForm>
 
+<SearchComponent OnSearch="HandelSearch"></SearchComponent>
 <br/>
 <InventoryListComponent SearchInventoryFilter="@InventoryNameToSearch" />
 
 <a href="/inventories/add" class="btn btn-primary">Add Inventory</a>
 
 @code {
-    [SupplyParameterFromForm] private string InventoryNameToSearch { get; set; } = string.Empty;
+
+    private string? InventoryNameToSearch { get; set; }
+
+    private async Task HandelSearch(string searchFilter)
+    {
+        InventoryNameToSearch = searchFilter;
+    }
 
 }
