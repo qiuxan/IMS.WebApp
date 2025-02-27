@@ -2,10 +2,11 @@
 
 @inject  IViewInventoriesByNameUseCase ViewInventoriesByNameUseCase
 @inject IEditInventoryUseCase EditInventoryUseCase
+@inject IDeleteInventoryUseCase DeleteInventoryUseCase
 
 <PageTitle>Testing page</PageTitle>
 
- 
+
 @if (inventories is not null && inventories.Count > 0)
 {
     <ul>
@@ -27,6 +28,9 @@
         var inventory = new Inventory { InventoryId = 1, InventoryName = "bike seat2", Quantity = 100, Price = 20 };
         await EditInventoryUseCase.ExecuteAsync(inventory);
         inventories = (await ViewInventoriesByNameUseCase.ExcuteAsync()).ToList();
+        // await DeleteInventoryUseCase.ExecuteAsync(1);
+
+
 
     }
 }
