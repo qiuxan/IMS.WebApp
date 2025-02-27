@@ -38,6 +38,16 @@ public class InventoryRepository : IInventoryRepository
         return Task.CompletedTask;
     }
 
+    Task IInventoryRepository.DeleteInventoryByIdAsync(int inventoryId)
+    {
+        var inventoryToDelete = _inventories.FirstOrDefault(i => i.InventoryId == inventoryId);
+        if (inventoryToDelete is not null)
+        {
+            _inventories.Remove(inventoryToDelete);
+        }
+        return Task.CompletedTask;
+    }
+
     async Task<Inventory> IInventoryRepository.GetInventoryByIdAsync(int inventoryId)
     {
         return await Task.FromResult(_inventories.FirstOrDefault(i => i.InventoryId == inventoryId));
